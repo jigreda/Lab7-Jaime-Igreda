@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-e_guk*mz=gj8#17pkq0_5*6&*yez$&h#ur3+sa-5!^7bwz(edr
 DEBUG = True
 
 ALLOWED_HOSTS = []
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
+STATIC_URL = '/static/'
 
 # Application definition
 
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'turismo',
 ]
 
 MIDDLEWARE = [

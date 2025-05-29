@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Eliminar Destino Turístico</title>
+    <link rel="stylesheet" href="{% static 'turismo/styles.css' %}">
+</head>
+<body>
+    <h1>Eliminar Destino Turístico</h1>
+    <p>¿Estás seguro que deseas eliminar el destino: <strong>{{ destino.nombreCiudad}}</strong>?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sí, eliminar</button>
+        <a href="{% url 'listar' %}">Cancelar</a>
+    </form>
+</body>
+</html>

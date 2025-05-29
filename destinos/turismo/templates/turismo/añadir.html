@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Añadir Destino Turístico</title>
+    <link rel="stylesheet" href="{% static 'turismo/styles.css' %}">
+</head>
+<body>
+    <h1>Añadir Destino Turístico</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <a href="{% url 'listar' %}">Volver a la lista</a>
+</body>
+</html>
